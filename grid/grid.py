@@ -14,7 +14,7 @@ class grid:
     def get_grid_index(self, coordinate):  #coordinate, a tuple or list length 2
         x_list = [k*(self.L/self.n) for k in range(self.n+1)]
         y_list = [k*(self.H/self.n) for k in range(self.n+1)]
-        normalized_coordinate = [i/self.n for i in coordinate] #need to be normalized to the length and width
+        normalized_coordinate = [i for i in coordinate] #need to be normalized to the length and width
         x_list = [i-normalized_coordinate[0] for i in x_list]
         y_list = [i-normalized_coordinate[1] for i in y_list]
         x_index = list(map(lambda i: i>0, x_list)).index(True)
